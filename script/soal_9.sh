@@ -16,7 +16,7 @@ touch /var/www/static.K57.com/html/annals/peta_beleriand.jpg
 # Konfigurasi Nginx server block
 # Setiap website di Nginx memiliki file konfigurasinya sendiri di dalam /etc/nginx/sites-available/
 
-cat <<EOF > /etc/nginx/sites-available/static.K57.com
+cat <<'EOF' > /etc/nginx/sites-available/static.K57.com
 server {
     listen 80;
     server_name static.K57.com;
@@ -25,7 +25,8 @@ server {
     index index.html;
 
     location / {
-        try_files \$uri \$uri/ =404;
+        index index.html;
+        try_files $uri $uri/ /index.html;
     }
 
     # Blok khusus untuk folder /annals/
@@ -52,4 +53,4 @@ service nginx restart
 # halaman utama
 curl http://static.K57.com
 # directory listening
-curl http://static.K57.com/annals/
+curl http://static.K57.com/annals/ 

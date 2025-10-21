@@ -26,7 +26,7 @@ cat /etc/bind/named.conf.local
 #cek dulu 
 zone "K57.com" {
     type slave;
-    masters { 10.92.3.; };   // IP ns1 (Tirion)
+    masters { 10.92.3.3; };   // IP ns1 (Tirion)
     file "/var/lib/bind/db.K57.com";
 };
 

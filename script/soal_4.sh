@@ -62,18 +62,14 @@ named-checkzone K57.com /etc/bind/zones/db.K57.com
 service bind9 restart
 service bind9 status
 
-apt update 
-apt bind9
-
-
 #lalu bisa jalankan dan cek
 source /root/.bashrc
 ping K57.com
 
 
 #Valmar
-apt-get update &&  apt-get install bind9 -y
-ln -s /etc/init.d/named /etc/init.d/bind9
+# apt-get update &&  apt-get install bind9 -y
+# ln -s /etc/init.d/named /etc/init.d/bind9
 #mkdir -p /etc/bind
 # nano /etc/bind/named.conf.local
 zone "K57.com" {

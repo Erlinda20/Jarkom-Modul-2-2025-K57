@@ -3,7 +3,8 @@ nano /etc/hosts
 
 
 #isi dari /etc/hosts
-k127.0.0.1   localhost
+
+127.0.0.1   localhost
 10.92.1.1   eonwe.K57.com eonwe
 10.92.1.2   earendil.K57.com earendil
 10.92.1.3   elwing.K57.com elwing
